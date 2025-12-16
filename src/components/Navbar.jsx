@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X, Search } from 'lucide-react';
+import { Menu, X, Search, ChevronDown } from 'lucide-react';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,6 +13,18 @@ const Navbar = () => {
     { name: 'Academics', path: '/academics' },
     { name: 'Admissions', path: '/admissions' },
     { name: 'Student Life', path: '/student-life' },
+    { name: 'Gallery', path: '/gallery' },
+    {
+      name: 'Mandatory Disclosure',
+      path: '#',
+      children: [
+        { name: 'RTI', path: '/rti' },
+        { name: 'Anti-Ragging', path: '/anti-ragging' },
+        { name: 'ICC', path: '/icc' },
+        { name: 'Grievance Redressal', path: '/grievance-redressal' },
+        { name: 'NIRF', path: '/nirf' },
+      ]
+    },
     { name: 'Contact', path: '/contact' },
   ];
 
@@ -22,7 +34,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="flex flex-col w-full">
+    <div className="flex flex-col w-full sticky top-0 z-[100] bg-white">
       {/* Top Bar - Govt Info */}
       <div className="bg-secondary text-white text-xs py-1 px-4 text-center">
         <p>Recognized by Govt. of Maharashtra | ISO 9001:2015 Certified</p>
@@ -36,9 +48,9 @@ const Navbar = () => {
             {/* LEFT LOGO */}
             <div className="flex-shrink-0 flex flex-col items-center">
               <img
-                src="/images/college-logo.png" // your logo here
-                alt="College Logo"
-                className="h-20 w-20 object-contain rounded-full border-2 border-primary"
+                src="/logo/bld_logo.jpg"
+                alt="B.L.D. Mahavidyalaya Logo"
+                className="h-24 w-24 object-contain rounded-full border-2 border-primary bg-white"
               />
             </div>
 
@@ -48,15 +60,13 @@ const Navbar = () => {
                 B.L.D. Mahavidyalaya
               </h1>
 
-              <h2 className="text-sm md:text-lg font-semibold text-gray-700 mt-1">
-                Dnyandeep Prashaskiya Mahavidyalaya
-              </h2>
+
 
               <p className="text-xs md:text-sm text-gray-500 mt-1 max-w-2xl mx-auto">
                 Affiliated to Kavikulaguru Kalidas Sanskrit University, Ramtek
               </p>
 
-              <p className="text-xs   font-bold mt-1 text-green-900">(College Code: 1234)</p>
+              <p className="text-xs font-bold mt-1 text-green-900">(College Code: 1234)</p>
             </div>
 
             {/* RIGHT LOGO */}
@@ -74,20 +84,47 @@ const Navbar = () => {
       </div>
 
       {/* NAVBAR */}
-      <nav className="bg-primary shadow-md sticky top-0 z-50">
+      <nav className="bg-primary shadow-md">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between h-14">
 
             {/* DESKTOP MENU */}
             <div className="hidden lg:flex items-center justify-center w-full space-x-1">
               {navItems.map((item) => (
-                <Link
-                  key={item.name}
-                  to={item.path}
-                  className="text-secondary hover:bg-secondary hover:text-white px-3 py-2 rounded-md text-sm font-bold uppercase transition-colors"
-                >
-                  {item.name}
-                </Link>
+                <div key={item.name} className="relative group">
+                  {item.children ? (
+                    <>
+                      <button
+                        className="flex items-center text-secondary hover:bg-secondary hover:text-white px-3 py-2 rounded-md text-sm font-bold uppercase transition-colors"
+                      >
+                        {item.name}
+                        <ChevronDown className="ml-1 h-4 w-4" />
+                      </button>
+                      <div className="absolute left-0 mt-0 w-56 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 ease-in-out z-50 pt-2">
+                        <div className="bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
+                          <div className="py-1">
+                            {item.children.map((child) => (
+                              <Link
+                                key={child.name}
+                                to={child.path}
+                                className="block px-4 py-2 text-sm text-gray-700 hover:bg-primary hover:text-white"
+                              >
+                                {child.name}
+                              </Link>
+                            ))}
+                          </div>
+                        </div>
+                      </div>
+                    </>
+                  ) : (
+                    <Link
+                      to={item.path}
+                      className="text-secondary hover:bg-secondary hover:text-white px-3 py-2 rounded-md text-sm font-bold uppercase transition-colors block"
+                    >
+                      {item.name}
+                    </Link>
+                  )}
+                </div>
               ))}
             </div>
 
@@ -129,15 +166,36 @@ const Navbar = () => {
           <div className="lg:hidden bg-white border-t border-gray-200">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
               {navItems.map((item) => (
-                <Link
-                  key={item.name}
-                  to={item.path}
-                  className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 
-                             hover:text-white hover:bg-secondary"
-                  onClick={() => setIsOpen(false)}
-                >
-                  {item.name}
-                </Link>
+                <div key={item.name}>
+                  {item.children ? (
+                    <>
+                      <div className="px-3 py-2 text-base font-medium text-gray-700 font-bold uppercase">
+                        {item.name}
+                      </div>
+                      <div className="pl-6 space-y-1">
+                        {item.children.map((child) => (
+                          <Link
+                            key={child.name}
+                            to={child.path}
+                            className="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-white hover:bg-secondary"
+                            onClick={() => setIsOpen(false)}
+                          >
+                            {child.name}
+                          </Link>
+                        ))}
+                      </div>
+                    </>
+                  ) : (
+                    <Link
+                      to={item.path}
+                      className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 
+                                 hover:text-white hover:bg-secondary font-bold uppercase"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      {item.name}
+                    </Link>
+                  )}
+                </div>
               ))}
 
               {/* MOBILE SEARCH */}

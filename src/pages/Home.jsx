@@ -106,6 +106,45 @@ const Home = () => {
                 </div>
             </div>
 
+
+            {/* College Functions Gallery Preview */}
+            <div className="py-16 bg-gradient-to-b from-white to-green-50">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="text-center mb-12">
+                        <h2 className="text-base font-semibold text-primary tracking-wide uppercase">Campus Life</h2>
+                        <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                            College Functions & Events
+                        </p>
+                        <p className="mt-4 max-w-2xl text-xl text-gray-500 mx-auto">
+                            Celebrating culture, talent, and community at B.L.D. Mahavidyalaya.
+                        </p>
+                    </div>
+
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                        {[1, 2, 12, 14].map((num) => (
+                            <div key={num} className="relative rounded-lg overflow-hidden shadow-lg group aspect-w-1 aspect-h-1">
+                                <img
+                                    src={`/college-images/c${num}.jpg`}
+                                    alt={`College Event ${num}`}
+                                    className="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-500"
+                                />
+                                <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-opacity duration-300"></div>
+                            </div>
+                        ))}
+                    </div>
+
+                    <div className="text-center mt-12">
+                        <Link
+                            to="/gallery"
+                            className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-secondary hover:bg-green-800 transition-colors shadow-md"
+                        >
+                            View All Photos
+                            <ArrowRight className="ml-2 h-5 w-5" />
+                        </Link>
+                    </div>
+                </div>
+            </div>
+
             {/* Call to Action */}
             <div className="bg-green-50 py-16">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
