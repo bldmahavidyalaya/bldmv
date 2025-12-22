@@ -2,7 +2,7 @@ import React from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import Layout from './layouts/Layout';
 import Home from './pages/Home';
-import { About, Administration, Academics, Admissions, StudentLife } from './pages/Placeholders';
+import { About, Academics, Admissions, StudentLife } from './pages/Placeholders';
 import Contact from './pages/Contact';
 import RTI from './pages/RTI';
 import AntiRagging from './pages/AntiRagging';
@@ -10,6 +10,7 @@ import ICC from './pages/ICC';
 import GrievanceRedressal from './pages/GrievanceRedressal';
 import NIRF from './pages/NIRF';
 import Gallery from './pages/Gallery';
+import AdministrationPage from './pages/Administration';
 
 function App() {
   return (
@@ -17,7 +18,7 @@ function App() {
       <Route path="/" element={<Layout />}>
         <Route index element={<Home />} />
         <Route path="about" element={<About />} />
-        <Route path="administration" element={<Administration />} />
+        <Route path="administration" element={<AdministrationPage />} />
         <Route path="academics" element={<Academics />} />
         <Route path="admissions" element={<Admissions />} />
         <Route path="student-life" element={<StudentLife />} />
