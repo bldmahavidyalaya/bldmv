@@ -20,7 +20,7 @@ const Gallery = () => {
                         College Gallery
                     </h1>
                     <p className="mt-4 text-xl text-gray-500">
-                        Glimpses of our vibrant campus life, cultural events, and academic activities.
+                        Glimpses of our vibrant campus life, cultural events, and academic activitie``s.
                     </p>
                 </div>
 

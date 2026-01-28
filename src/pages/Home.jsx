@@ -9,11 +9,11 @@ const Home = () => {
       <div className="relative bg-secondary overflow-hidden">
         <div className="absolute inset-0">
           <img
-            className="w-full h-full object-cover opacity-20"
-            src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1"
+            className="w-full h-full object-cover"
+            src="/college-images/c2.jpg"
             alt="College Campus"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-secondary to-green-900 mix-blend-multiply" />
+          <div className="absolute inset-0 bg-black/60" />
         </div>
 
         <div className="relative max-w-7xl mx-auto py-16 sm:py-24 px-4">
@@ -51,6 +51,51 @@ const Home = () => {
           </span>
           <div className="text-secondary text-xs sm:text-sm whitespace-nowrap overflow-hidden">
             Admissions Open for 2025–26 • Free UPSC/MPSC Coaching • Scholarships Available
+          </div>
+        </div>
+      </div>
+
+      {/* ================= STATS COUNTER ================= */}
+      <div className="bg-secondary py-12 border-t border-green-800">
+        <div className="max-w-7xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-8 text-center text-white">
+          <StatBox value="30+" label="Years of Excellence" />
+          <StatBox value="1500+" label="Students Enrolled" />
+          <StatBox value="50+" label="Qualified Faculty" />
+          <StatBox value="100%" label="Commitment" />
+        </div>
+      </div>
+
+      {/* ================= PRINCIPAL'S MESSAGE ================= */}
+      <div className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="flex flex-col md:flex-row items-center gap-12">
+            <div className="md:w-1/3">
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl rotate-2 hover:rotate-0 transition-all duration-500">
+                <img
+                  src="/staff/swapnil.png"
+                  alt="Principal"
+                  className="w-full h-auto object-cover"
+                />
+                <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/80 to-transparent p-6 pt-24">
+                  <h3 className="text-white font-bold text-xl uppercase">Dr. Swapnil Deshmukh</h3>
+                  <p className="text-yellow-400 text-sm font-medium">Principal</p>
+                </div>
+              </div>
+            </div>
+            <div className="md:w-2/3">
+              <div className="inline-block px-4 py-1.5 bg-green-100 text-secondary text-xs font-bold rounded-full uppercase tracking-widest mb-4">
+                Principal's Desk
+              </div>
+              <h2 className="text-3xl md:text-5xl font-black text-secondary mb-6 leading-tight">
+                "Nurturing Tomorrow's <span className="text-yellow-500">Leaders</span>"
+              </h2>
+              <blockquote className="text-lg md:text-xl text-gray-600 italic border-l-4 border-yellow-400 pl-6 mb-8">
+                "Our mission is not just to provide degrees, but to shape character and capability. At B.L.D. Mahavidyalaya, we believe every student in rural India has the potential to lead. We provide the guidance, discipline, and resources to help you crack the toughest competitive exams."
+              </blockquote>
+              <Link to="/administration" className="text-secondary font-bold hover:text-green-800 uppercase text-sm tracking-widest border-b-2 border-yellow-400 pb-1">
+                Meet Our Leadership
+              </Link>
+            </div>
           </div>
         </div>
       </div>
@@ -145,6 +190,15 @@ const Home = () => {
     </div>
   );
 };
+
+function StatBox({ value, label }) {
+  return (
+    <div className="p-4">
+      <div className="text-4xl md:text-5xl font-black text-yellow-400 mb-2">{value}</div>
+      <div className="text-sm md:text-base font-medium text-green-100 uppercase tracking-wider">{label}</div>
+    </div>
+  );
+}
 
 function Feature({ icon, title, text }) {
   return (

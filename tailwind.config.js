@@ -11,6 +11,10 @@ export default {
                 secondary: '#166534', // Deep Green
                 accent: '#ffffff',
             },
+            fontFamily: {
+                sans: ['Inter', 'sans-serif'],
+                serif: ['"Playfair Display"', 'serif'],
+            },
             animation: {
                 marquee: 'marquee 25s linear infinite',
             },

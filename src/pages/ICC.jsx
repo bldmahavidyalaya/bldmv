@@ -60,20 +60,9 @@ const ICC = () => {
                             <li>The complaint should be submitted within 3 months of the date of the incident.</li>
                             <li>The identity of the complainant will be kept confidential.</li>
                         </ul>
-                        <div className="mt-6">
-                            <a href="#" className="bg-purple-700 text-white px-6 py-2 rounded-full font-bold hover:bg-purple-800 transition">
-                                Download Complaint Form
-                            </a>
-                        </div>
                     </section>
 
-                    <section>
-                        <h3 className="text-lg font-bold text-gray-900 mb-3">Resources</h3>
-                        <ul className="list-disc list-inside text-blue-600 space-y-2">
-                            <li><a href="#" className="hover:underline">UGC Regulations, 2015 (PDF)</a></li>
-                            <li><a href="#" className="hover:underline">Handbook on Sexual Harassment of Women at Workplace</a></li>
-                        </ul>
-                    </section>
+
                 </div>
             </div>
         </div>

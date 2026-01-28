@@ -63,7 +63,7 @@ const AntiRagging = () => {
                         <h3 className="text-lg font-bold text-gray-900 mb-3">Important Links</h3>
                         <ul className="list-disc list-inside text-blue-600 space-y-2">
                             <li><a href="https://www.antiragging.in/" target="_blank" rel="noreferrer" className="hover:underline">UGC Anti-Ragging Website</a></li>
-                            <li><a href="#" className="hover:underline">Online Anti-Ragging Affidavit</a></li>
+
                         </ul>
                     </section>
 

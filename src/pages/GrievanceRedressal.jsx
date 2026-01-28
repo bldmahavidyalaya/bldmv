@@ -75,13 +75,10 @@ const GrievanceRedressal = () => {
                     {/* Grievance Form */}
                     <section className="text-center py-6">
                         <h3 className="text-xl font-bold text-gray-800 mb-2">Submit a Grievance</h3>
-                        <p className="text-gray-600 mb-4">You can submit your grievance online through the portal or download the form.</p>
+                        <p className="text-gray-600 mb-4">You can submit your grievance online through the portal.</p>
                         <div className="space-x-4">
                             <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-md transition">
                                 Online Grievance Form
-                            </button>
-                            <button className="bg-white hover:bg-gray-100 text-blue-600 font-bold py-2 px-6 rounded-md border border-blue-600 transition">
-                                Download Form (PDF)
                             </button>
                         </div>
                     </section>
