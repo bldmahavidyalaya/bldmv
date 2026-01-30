@@ -1,6 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+
 import { Download, FileText, Clock, AlertTriangle, Book, Shield } from 'lucide-react';
+import SEO from '../components/SEO';
 
 const Section = ({ title, icon: Icon, children, className = "" }) => (
     <section className={`py-8 md:py-12 ${className}`}>
@@ -40,6 +42,10 @@ const ListItem = ({ children }) => (
 const Admissions = () => {
     return (
         <div className="bg-gray-50 min-h-screen font-sans">
+            <SEO
+                title="Admissions"
+                description="Admission rules, required documents, and general regulations for B.L.D. Mahavidyalaya."
+            />
             {/* Hero Section */}
             <div className="relative h-[300px] md:h-[400px] w-full overflow-hidden bg-green-900">
                 <div className="absolute inset-0 bg-black/50 z-10" />

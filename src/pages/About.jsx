@@ -142,11 +142,11 @@ const About = () => {
                 <section className="bg-gray-800 text-gray-300 rounded-2xl py-8 px-4 md:px-12">
                     <h3 className="text-center text-white font-bold uppercase tracking-widest mb-8 border-b border-gray-700 pb-4 inline-block mx-auto">Additional Information</h3>
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 text-sm">
-                        <InfoItem label="Accreditation" value="No ranking currently" />
+                        {/* <InfoItem label="Accreditation" value="No ranking currently" /> */}
                         <InfoItem label="UGC Status" value="2(f) / 12B Proposals Submitted" />
                         <InfoItem label="College Code" value="1270" />
-                        <InfoItem label="Annual Reports" value="Nil" />
-                        <InfoItem label="Annual Accounts" value="Nil" />
+                        {/* <InfoItem label="Annual Reports" value="Nil" /> */}
+                        {/* <InfoItem label="Annual Accounts" value="Nil" /> */}
                         <InfoItem label="Sponsoring Body" value="Registered Society (Act 1980/1950)" />
                     </div>
                 </section>

@@ -8,7 +8,7 @@ const AdministrationPage = () => {
     { srNo: 2, name: "AJAY BAPUSAHEB DESHMUKH", designation: "TEACHER", subject: "SOCIOLOGY", image: "/staff/ajay.png" },
     { srNo: 3, name: "BHARAT DEVIDAS RATHOD", designation: "TEACHER", subject: "GEOGRAPHY", image: "/staff/bharat.png" },
     { srNo: 4, name: "RAHUL VISHWAS MORE", designation: "TEACHER", subject: "ECONOMICS", image: "/staff/rahul.png" },
-    { srNo: 5, name: "SHANKAR ANNASAHEB BOBADE", designation: "TEACHER", subject: "POLITICAL SCIENCE", image: null },
+    // { srNo: 5, name: "SHANKAR ANNASAHEB BOBADE", designation: "TEACHER", subject: "POLITICAL SCIENCE", image: null }, // Hidden due to missing image
     { srNo: 6, name: "VIJAY BAPUSAHEB DESHMUKH", designation: "TEACHER", subject: "HISTORY", image: "/staff/vijay.png" },
     { srNo: 7, name: "YOGITA CHANDRAKANT KAPSE", designation: "TEACHER", subject: "LIBRARIAN", image: "/staff/yogita.png" },
     { srNo: 8, name: "AMOL MAHADEV KADAM", designation: "TEACHER", subject: "SANSKRIT", image: "/staff/amol.png" },
