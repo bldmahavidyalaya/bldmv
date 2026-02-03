@@ -18,36 +18,47 @@ const ICC = () => {
 
                     {/* Committee Members */}
                     <section>
-                        <h2 className="text-xl font-bold text-gray-900 mb-4 border-b pb-2">Committee Members</h2>
-                        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                            {/* Presiding Officer */}
-                            <div className="bg-white border rounded-lg p-4 shadow-sm hover:shadow-md transition">
-                                <h3 className="font-bold text-lg text-purple-800">Presiding Officer</h3>
-                                <p className="mt-2 font-medium text-gray-900">[Name]</p>
-                                <p className="text-sm text-gray-600">Senior Faculty</p>
-                                <p className="text-sm mt-3 text-gray-500">Contact: [Email/Phone]</p>
-                            </div>
-
-                            {/* Member 1 */}
-                            <div className="bg-white border rounded-lg p-4 shadow-sm hover:shadow-md transition">
-                                <h3 className="font-bold text-lg text-gray-700">Member</h3>
-                                <p className="mt-2 font-medium text-gray-900">[Name]</p>
-                                <p className="text-sm text-gray-600">Faculty Member</p>
-                            </div>
-
-                            {/* Member 2 */}
-                            <div className="bg-white border rounded-lg p-4 shadow-sm hover:shadow-md transition">
-                                <h3 className="font-bold text-lg text-gray-700">Member</h3>
-                                <p className="mt-2 font-medium text-gray-900">[Name]</p>
-                                <p className="text-sm text-gray-600">Non-Teaching Staff</p>
-                            </div>
-
-                            {/* External Member */}
-                            <div className="bg-white border rounded-lg p-4 shadow-sm hover:shadow-md transition">
-                                <h3 className="font-bold text-lg text-gray-700">External Member</h3>
-                                <p className="mt-2 font-medium text-gray-900">[Name]</p>
-                                <p className="text-sm text-gray-600">NGO / Legal Expert</p>
-                            </div>
+                        <div className="flex justify-between items-center mb-4 border-b pb-2">
+                            <h2 className="text-xl font-bold text-gray-900">Committee Members</h2>
+                            <span className="text-sm font-semibold text-purple-800 bg-purple-100 px-3 py-1 rounded-full">Committee Tenure: 3 Years</span>
+                        </div>
+                        <div className="overflow-x-auto bg-white rounded-lg shadow-sm border border-gray-200">
+                            <table className="min-w-full divide-y divide-gray-200 text-sm">
+                                <thead className="bg-gray-50">
+                                    <tr>
+                                        <th className="px-6 py-3 text-left font-semibold text-gray-700 uppercase tracking-wider">Name</th>
+                                        <th className="px-6 py-3 text-left font-semibold text-gray-700 uppercase tracking-wider">Role/Designation</th>
+                                        <th className="px-6 py-3 text-left font-semibold text-gray-700 uppercase tracking-wider">Position</th>
+                                    </tr>
+                                </thead>
+                                <tbody className="bg-white divide-y divide-gray-200">
+                                    <tr className="hover:bg-gray-50 transition-colors">
+                                        <td className="px-6 py-4 font-medium text-gray-900">Prof. Rani Chandrakant Kapse</td>
+                                        <td className="px-6 py-4 text-gray-600">Female Professor</td>
+                                        <td className="px-6 py-4 text-purple-700 font-bold">Chairperson</td>
+                                    </tr>
+                                    <tr className="hover:bg-gray-50 transition-colors">
+                                        <td className="px-6 py-4 font-medium text-gray-900">Prof. Ajay Bapusaheb Deshmukh</td>
+                                        <td className="px-6 py-4 text-gray-600">Professor</td>
+                                        <td className="px-6 py-4 text-gray-700">Member</td>
+                                    </tr>
+                                    <tr className="hover:bg-gray-50 transition-colors">
+                                        <td className="px-6 py-4 font-medium text-gray-900">Tejas Pravin Chavan</td>
+                                        <td className="px-6 py-4 text-gray-600">Non-Teaching Staff</td>
+                                        <td className="px-6 py-4 text-gray-700">Member</td>
+                                    </tr>
+                                    <tr className="hover:bg-gray-50 transition-colors">
+                                        <td className="px-6 py-4 font-medium text-gray-900">Rohit Ganesh Chavan</td>
+                                        <td className="px-6 py-4 text-gray-600">Student Representative</td>
+                                        <td className="px-6 py-4 text-gray-700">Member</td>
+                                    </tr>
+                                    <tr className="hover:bg-gray-50 transition-colors">
+                                        <td className="px-6 py-4 font-medium text-gray-900">Abrah Kayyum Sheikh</td>
+                                        <td className="px-6 py-4 text-gray-600">NGO Representative</td>
+                                        <td className="px-6 py-4 text-gray-700">Member</td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </section>
 
@@ -56,7 +67,7 @@ const ICC = () => {
                         <h2 className="text-xl font-bold text-purple-900 mb-3">How to File a Complaint</h2>
                         <ul className="list-disc list-inside space-y-2 text-gray-800">
                             <li>A written complaint can be submitted to the Presiding Officer or any member of the ICC.</li>
-                            <li>Complaints can also be emailed to <strong>icc@[collegedomain].com</strong>.</li>
+                            <li>Complaints can also be emailed to <strong>icc@bldmahavidyalay.com</strong>.</li>
                             <li>The complaint should be submitted within 3 months of the date of the incident.</li>
                             <li>The identity of the complainant will be kept confidential.</li>
                         </ul>

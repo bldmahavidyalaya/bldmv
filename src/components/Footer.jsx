@@ -14,10 +14,11 @@ const Footer = () => {
                             Empowering rural students with quality education and preparation for Civil Services (UPSC, MPSC).
                         </p>
                         <div className="flex space-x-4">
-                            {/* Social Icons Placeholder */}
+                            {/* Social Icons Placeholder - Commented out until official links are available
                             <a href="#" className="text-gray-400 hover:text-primary transition-colors">Facebook</a>
                             <a href="#" className="text-gray-400 hover:text-primary transition-colors">Twitter</a>
                             <a href="#" className="text-gray-400 hover:text-primary transition-colors">Instagram</a>
+                            */}
                         </div>
                     </div>
 
@@ -37,10 +38,9 @@ const Footer = () => {
                     <div>
                         <h3 className="text-lg font-semibold text-white mb-4">Mandatory Disclosures</h3>
                         <ul className="space-y-2 text-sm text-gray-400">
-                            <li><Link to="/rti" className="hover:text-primary transition-colors">RTI</Link></li>
                             <li><Link to="/anti-ragging" className="hover:text-primary transition-colors">Anti-Ragging</Link></li>
                             <li><Link to="/icc" className="hover:text-primary transition-colors">Internal Complaints Committee</Link></li>
-                            <li><Link to="/grievance" className="hover:text-primary transition-colors">Grievance Redressal</Link></li>
+                            <li><Link to="/grievance-redressal" className="hover:text-primary transition-colors">Grievance Redressal</Link></li>
                             <li><Link to="/nirf" className="hover:text-primary transition-colors">NIRF</Link></li>
                         </ul>
                     </div>
@@ -55,7 +55,7 @@ const Footer = () => {
                             </li>
                             <li className="flex items-center">
                                 <Phone className="h-5 w-5 text-primary mr-2 flex-shrink-0" />
-                                <span>9370078880, 9689773455</span>
+                                <span>+91 9370078880, +91 9689773455</span>
                             </li>
                             <li className="flex items-center">
                                 <Mail className="h-5 w-5 text-primary mr-2 flex-shrink-0" />

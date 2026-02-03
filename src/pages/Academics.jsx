@@ -32,7 +32,7 @@ const Academics = () => {
                         India Administrative Services holds a unique appeal to the young 12th passed students. With its varied channels of service to the Nation, it offers immense scope to the young Indian to shoulder a responsibility in the task of Nation-Building.
                     </p>
                     <p className="text-gray-700 text-lg leading-relaxed">
-                        <strong>B.L.D. Mahavidyalaya</strong>, affiliated to <strong className="text-secondary">Kavikulaguru Kalidas Sanskrit University Ramtek</strong>, introduces a 3-year Degree B.A. in Civil Services.
+                        <strong>B.L.D. Mahavidyalaya</strong>, affiliated to <strong className="text-secondary">Kavikulaguru Kalidas Sanskrit University Ramtek</strong>, introduces a 3-year Degree B.A. in Civil Services. We are providing B.A courses with best faculties.
                     </p>
                 </section>
 
@@ -51,7 +51,7 @@ const Academics = () => {
                             <HighlightRow label="Medium" value="English, Marathi" />
                             <HighlightRow label="Age Limit" value="17 to 25 Years" />
                             <HighlightRow label="Period" value="3 Years (6 Semesters)" />
-                            <HighlightRow label="Total Marks" value="3600" />
+                            <HighlightRow label="Total Marks" value="3600 (Each semester: 6 subjects × 100 marks; 60 Theory + 40 Internal)." />
                         </div>
                     </div>
 
@@ -114,21 +114,21 @@ const Academics = () => {
                                 <tr>
                                     <td className="p-4">1st Year (Sem I & II)</td>
                                     <td className="p-4">480</td>
-                                    <td className="p-4">750</td>
+                                    <td className="p-4">720</td>
                                     <td className="p-4">1200 <span className="text-xs text-green-600">(Pass: 420)</span></td>
                                     <td className="p-4">48</td>
                                 </tr>
                                 <tr>
                                     <td className="p-4">2nd Year (Sem III & IV)</td>
                                     <td className="p-4">480</td>
-                                    <td className="p-4">750</td>
+                                    <td className="p-4">720</td>
                                     <td className="p-4">1200 <span className="text-xs text-green-600">(Pass: 420)</span></td>
                                     <td className="p-4">48</td>
                                 </tr>
                                 <tr>
                                     <td className="p-4">3rd Year (Sem V & VI)</td>
                                     <td className="p-4">480</td>
-                                    <td className="p-4">750</td>
+                                    <td className="p-4">720</td>
                                     <td className="p-4">1200 <span className="text-xs text-green-600">(Pass: 420)</span></td>
                                     <td className="p-4">48</td>
                                 </tr>
@@ -193,7 +193,7 @@ const Academics = () => {
                     <InfoCard
                         icon={Check}
                         title="IQAC"
-                        color="green"
+                        color="green" d
                         desc="Responsible for ensuring quality in all academic and administrative activities."
                     />
                     <InfoCard

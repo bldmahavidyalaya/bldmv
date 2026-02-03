@@ -30,58 +30,52 @@ const GrievanceRedressal = () => {
 
                     {/* Committee */}
                     <section>
-                        <h2 className="text-xl font-bold text-gray-900 mb-4 border-b pb-2">Committee Members (SGRC)</h2>
-                        <div className="overflow-x-auto">
+                        <div className="flex justify-between items-center mb-4 border-b pb-2">
+                            <h2 className="text-xl font-bold text-gray-900">Committee Members (SGRC)</h2>
+                            <span className="text-sm font-semibold text-blue-800 bg-blue-100 px-3 py-1 rounded-full">Tenure: 3 Years</span>
+                        </div>
+                        <div className="overflow-x-auto bg-white rounded-lg shadow-sm border border-gray-200">
                             <table className="min-w-full divide-y divide-gray-200 text-sm">
                                 <thead className="bg-gray-50">
                                     <tr>
-                                        <th className="px-4 py-2 text-left font-medium text-gray-500 uppercase">Name</th>
-                                        <th className="px-4 py-2 text-left font-medium text-gray-500 uppercase">Designation</th>
-                                        <th className="px-4 py-2 text-left font-medium text-gray-500 uppercase">Role</th>
+                                        <th className="px-6 py-3 text-left font-semibold text-gray-700 uppercase tracking-wider">Name</th>
+                                        <th className="px-6 py-3 text-left font-semibold text-gray-700 uppercase tracking-wider">Designation/Role</th>
+                                        <th className="px-6 py-3 text-left font-semibold text-gray-700 uppercase tracking-wider">Position</th>
                                     </tr>
                                 </thead>
                                 <tbody className="bg-white divide-y divide-gray-200">
-                                    <tr>
-                                        <td className="px-4 py-3">[Name]</td>
-                                        <td className="px-4 py-3">Principal</td>
-                                        <td className="px-4 py-3 font-semibold">Chairperson</td>
+                                    <tr className="hover:bg-gray-50 transition-colors">
+                                        <td className="px-6 py-4 font-medium text-gray-900">Prof. Rani Chandrakant Kapse</td>
+                                        <td className="px-6 py-4 text-gray-600">Female Professor</td>
+                                        <td className="px-6 py-4 text-blue-700 font-bold">Chairperson</td>
                                     </tr>
-                                    <tr>
-                                        <td className="px-4 py-3">[Name]</td>
-                                        <td className="px-4 py-3">Senior Faculty</td>
-                                        <td className="px-4 py-3">Member</td>
+                                    <tr className="hover:bg-gray-50 transition-colors">
+                                        <td className="px-6 py-4 font-medium text-gray-900">Prof. Ajay Bapusaheb Deshmukh</td>
+                                        <td className="px-6 py-4 text-gray-600">Member</td>
+                                        <td className="px-6 py-4 text-gray-700">Member</td>
                                     </tr>
-                                    <tr>
-                                        <td className="px-4 py-3">[Name]</td>
-                                        <td className="px-4 py-3">Student Representative</td>
-                                        <td className="px-4 py-3">Special Invitee</td>
+                                    <tr className="hover:bg-gray-50 transition-colors">
+                                        <td className="px-6 py-4 font-medium text-gray-900">Abrah Kayyum Sheikh</td>
+                                        <td className="px-6 py-4 text-gray-600">NGO Representative</td>
+                                        <td className="px-6 py-4 text-gray-700">Member</td>
+                                    </tr>
+                                    <tr className="hover:bg-gray-50 transition-colors">
+                                        <td className="px-6 py-4 font-medium text-gray-900">Prof. Bharat Devidas Rathod</td>
+                                        <td className="px-6 py-4 text-gray-600">Professor</td>
+                                        <td className="px-6 py-4 text-gray-700">Member</td>
+                                    </tr>
+                                    <tr className="hover:bg-gray-50 transition-colors">
+                                        <td className="px-6 py-4 font-medium text-gray-900">Yogita Babasaheb Nimbalkar</td>
+                                        <td className="px-6 py-4 text-gray-600">Non-Teaching Staff</td>
+                                        <td className="px-6 py-4 text-gray-700">Member</td>
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
                     </section>
 
-                    {/* Ombudsperson */}
-                    <section className="bg-white border-l-4 border-yellow-400 p-4 shadow-sm">
-                        <h2 className="text-xl font-bold text-gray-900 mb-2">Ombudsperson</h2>
-                        <p className="text-gray-600 mb-2">For appeals against the decision of the SGRC, students may approach the Ombudsperson appointed by the University.</p>
-                        <div className="mt-2">
-                            <p className="font-bold">[Name of Ombudsperson]</p>
-                            <p>Retired Judge / Professor</p>
-                            <p>Email: [Email ID]</p>
-                        </div>
-                    </section>
 
-                    {/* Grievance Form */}
-                    <section className="text-center py-6">
-                        <h3 className="text-xl font-bold text-gray-800 mb-2">Submit a Grievance</h3>
-                        <p className="text-gray-600 mb-4">You can submit your grievance online through the portal.</p>
-                        <div className="space-x-4">
-                            <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-md transition">
-                                Online Grievance Form
-                            </button>
-                        </div>
-                    </section>
+
 
                 </div>
             </div>

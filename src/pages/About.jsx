@@ -68,52 +68,7 @@ const About = () => {
                     </div>
                 </section>
 
-                {/* PROGRAM DETAILS */}
-                <section>
-                    <div className="flex items-center gap-4 mb-8">
-                        <div className="bg-yellow-500 p-3 rounded-lg text-white shadow-lg">
-                            <BookOpen size={32} />
-                        </div>
-                        <h2 className="text-3xl font-bold text-gray-900">B.A. in Civil Services — Program Details</h2>
-                    </div>
 
-                    <div className="bg-white rounded-2xl shadow-md border border-gray-200 overflow-hidden">
-                        <div className="bg-gray-50 px-8 py-4 border-b border-gray-200">
-                            <p className="text-secondary font-bold text-lg">We are providing B.A courses with best faculties.</p>
-                        </div>
-                        <div className="p-8 grid md:grid-cols-2 gap-x-12 gap-y-6">
-                            <DetailRow label="Aim" value="To prepare students for competitive examinations (UPSC / State Services)." />
-                            <DetailRow label="Eligibility" value="Passed H.S.S.C. with proficiency in English & Marathi." />
-                            <DetailRow label="Medium" value="English, Marathi" />
-                            <DetailRow label="Age Limit" value="17 to 25 Years" />
-                            <DetailRow label="Duration" value="3 Years (6 Semesters)" />
-                            <DetailRow label="Total Marks" value="3600 (Each semester: 6 subjects × 100 marks; 60 Theory + 40 Internal)." />
-                        </div>
-                        <div className="px-8 pb-8 pt-4">
-                            <h4 className="font-bold text-gray-900 mb-3 border-b border-gray-100 pb-2">Course Structure</h4>
-                            <div className="grid md:grid-cols-2 gap-8">
-                                <div>
-                                    <span className="text-xs font-bold text-gray-400 uppercase tracking-wider">Compulsory Subjects</span>
-                                    <ul className="mt-2 text-gray-700 list-disc list-inside">
-                                        <li>English</li>
-                                        <li>Sanskrit</li>
-                                        <li>General Study - I</li>
-                                        <li>Introduction to Civil Services</li>
-                                    </ul>
-                                </div>
-                                <div>
-                                    <span className="text-xs font-bold text-gray-400 uppercase tracking-wider">Elective Subjects (Choose Any Two)</span>
-                                    <div className="mt-2 text-gray-700 flex flex-wrap gap-2">
-                                        {['History', 'Sociology', 'Political Science', 'Economics', 'Public Administration', 'Geography', 'Marathi Literature', 'Sanskrit Literature', 'Mathematics'].map((sub, i) => (
-                                            <span key={i} className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">{sub}</span>
-                                        ))}
-                                    </div>
-                                    <p className="text-xs text-red-500 mt-2 font-semibold italic">* Note: Political Science + Public Administration cannot be taken together.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
 
                 {/* LEGAL & IDP */}
                 <div className="grid md:grid-cols-2 gap-8">

@@ -26,33 +26,60 @@ const AntiRagging = () => {
 
                     {/* Committee */}
                     <section>
-                        <h2 className="text-xl font-bold text-gray-900 mb-4 border-b pb-2">Anti-Ragging Committee</h2>
-                        <div className="overflow-x-auto">
-                            <table className="min-w-full divide-y divide-gray-200">
+                        <div className="flex justify-between items-center mb-4 border-b pb-2">
+                            <h2 className="text-xl font-bold text-gray-900">Anti-Ragging Committee</h2>
+                            <span className="text-sm font-semibold text-red-800 bg-red-100 px-3 py-1 rounded-full">Tenure: 1 Year</span>
+                        </div>
+                        <div className="overflow-x-auto bg-white rounded-lg shadow-sm border border-gray-200">
+                            <table className="min-w-full divide-y divide-gray-200 text-sm">
                                 <thead className="bg-gray-50">
                                     <tr>
-                                        <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Name</th>
-                                        <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Designation</th>
-                                        <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Role</th>
+                                        <th className="px-6 py-3 text-left font-semibold text-gray-700 uppercase tracking-wider">Name</th>
+                                        <th className="px-6 py-3 text-left font-semibold text-gray-700 uppercase tracking-wider">Designation/Role</th>
+                                        <th className="px-6 py-3 text-left font-semibold text-gray-700 uppercase tracking-wider">Position</th>
                                     </tr>
                                 </thead>
                                 <tbody className="bg-white divide-y divide-gray-200">
-                                    <tr>
-                                        <td className="px-6 py-4 whitespace-nowrap">[Name]</td>
-                                        <td className="px-6 py-4 whitespace-nowrap">Principal</td>
-                                        <td className="px-6 py-4 whitespace-nowrap font-medium text-gray-900">Chairperson</td>
+                                    <tr className="hover:bg-gray-50 transition-colors">
+                                        <td className="px-6 py-4 font-medium text-gray-900">Swapnil Bapusaheb Deshmukh</td>
+                                        <td className="px-6 py-4 text-gray-600">Secretary of the Institution</td>
+                                        <td className="px-6 py-4 text-red-700 font-bold">Chairperson</td>
                                     </tr>
-                                    <tr>
-                                        <td className="px-6 py-4 whitespace-nowrap">[Name]</td>
-                                        <td className="px-6 py-4 whitespace-nowrap">Faculty Member</td>
-                                        <td className="px-6 py-4 whitespace-nowrap">Member</td>
+                                    <tr className="hover:bg-gray-50 transition-colors">
+                                        <td className="px-6 py-4 font-medium text-gray-900">Bharat Devidas Rathod</td>
+                                        <td className="px-6 py-4 text-gray-600">Teacher Representative</td>
+                                        <td className="px-6 py-4 text-gray-700">Member</td>
                                     </tr>
-                                    <tr>
-                                        <td className="px-6 py-4 whitespace-nowrap">[Name]</td>
-                                        <td className="px-6 py-4 whitespace-nowrap">NSS Program Officer</td>
-                                        <td className="px-6 py-4 whitespace-nowrap">Member</td>
+                                    <tr className="hover:bg-gray-50 transition-colors">
+                                        <td className="px-6 py-4 font-medium text-gray-900">Vikas Premsing Rathod</td>
+                                        <td className="px-6 py-4 text-gray-600">Non-Teaching Representative</td>
+                                        <td className="px-6 py-4 text-gray-700">Member</td>
                                     </tr>
-                                    {/* Add more rows as needed */}
+                                    <tr className="hover:bg-gray-50 transition-colors">
+                                        <td className="px-6 py-4 font-medium text-gray-900">Vijay Bapusaheb Deshmukh</td>
+                                        <td className="px-6 py-4 text-gray-600">Civil Administration (Gram Panchayat Member)</td>
+                                        <td className="px-6 py-4 text-gray-700">Member</td>
+                                    </tr>
+                                    <tr className="hover:bg-gray-50 transition-colors">
+                                        <td className="px-6 py-4 font-medium text-gray-900">Amol Sampatrao Shirsath</td>
+                                        <td className="px-6 py-4 text-gray-600">Gram Panchayat Representative</td>
+                                        <td className="px-6 py-4 text-gray-700">Member</td>
+                                    </tr>
+                                    <tr className="hover:bg-gray-50 transition-colors">
+                                        <td className="px-6 py-4 font-medium text-gray-900">Nikita Shekhar Somvanshi</td>
+                                        <td className="px-6 py-4 text-gray-600">Teacher Representative</td>
+                                        <td className="px-6 py-4 text-gray-700">Member</td>
+                                    </tr>
+                                    <tr className="hover:bg-gray-50 transition-colors">
+                                        <td className="px-6 py-4 font-medium text-gray-900">Ganesh Uttamrao Chavan</td>
+                                        <td className="px-6 py-4 text-gray-600">Parent Representative</td>
+                                        <td className="px-6 py-4 text-gray-700">Member</td>
+                                    </tr>
+                                    <tr className="hover:bg-gray-50 transition-colors">
+                                        <td className="px-6 py-4 font-medium text-gray-900">Dadarao Govindrao Pawar</td>
+                                        <td className="px-6 py-4 text-gray-600">Police Representative</td>
+                                        <td className="px-6 py-4 text-gray-700">Member</td>
+                                    </tr>
                                 </tbody>
                             </table>
                         </div>

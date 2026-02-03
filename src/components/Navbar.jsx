@@ -7,9 +7,49 @@ import { Menu, X, ChevronDown, Search } from "lucide-react";
  * Updated with flat navigation menu (No Dropdowns)
  */
 
+
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [activeDropdown, setActiveDropdown] = useState(null);
+    const [searchQuery, setSearchQuery] = useState("");
+    const [searchResults, setSearchResults] = useState([]);
+
+    // Site Search Index
+    const searchIndex = [
+        { title: "Home", path: "/", keywords: "home, main, landing" },
+        { title: "About HEI", path: "/about", keywords: "about, history, mission, vision, management" },
+        { title: "Administration", path: "/administration", keywords: "principal, staff, faculty, clerk, peon" },
+        { title: "Academics", path: "/academics", keywords: "courses, ba, subjects, syllabus, exams, results" },
+        { title: "Admissions", path: "/admissions", keywords: "admission, apply, eligibility, fees, documents" },
+        { title: "Student Life", path: "/student-life", keywords: "activities, sports, events, facilities, ncc, nss" },
+        { title: "Gallery", path: "/gallery", keywords: "photos, images, campus, events" },
+        { title: "Anti-Ragging", path: "/anti-ragging", keywords: "ragging, complaint, committee, helpline" },
+        { title: "Internal Complaints Committee (ICC)", path: "/icc", keywords: "icc, sexual harassment, women, complaint" },
+        { title: "Grievance Redressal", path: "/grievance-redressal", keywords: "grievance, complaint, student support, ombudsperson" },
+        { title: "Contact Us", path: "/contact", keywords: "contact, phone, email, address, location, map" },
+        { title: "NIRF", path: "/nirf", keywords: "nirf, ranking, data" }
+    ];
+
+    const handleSearch = (query) => {
+        setSearchQuery(query);
+        if (query.trim() === "") {
+            setSearchResults([]);
+            return;
+        }
+
+        const lowerQuery = query.toLowerCase();
+        const results = searchIndex.filter(item =>
+            item.title.toLowerCase().includes(lowerQuery) ||
+            item.keywords.toLowerCase().includes(lowerQuery)
+        );
+        setSearchResults(results);
+    };
+
+    const handleResultClick = () => {
+        setSearchQuery("");
+        setSearchResults([]);
+        setIsOpen(false);
+    };
 
     const navItems = [
         { name: "Home", path: "/" },
@@ -22,11 +62,9 @@ const Navbar = () => {
         {
             name: "Mandatory Disclosure",
             children: [
-                { name: "RTI", path: "/rti" },
                 { name: "Anti-Ragging", path: "/anti-ragging" },
                 { name: "ICC", path: "/icc" },
                 { name: "Grievance Redressal", path: "/grievance-redressal" },
-                { name: "NIRF", path: "/nirf" },
             ],
         },
         { name: "Contact Us", path: "/contact" },
@@ -132,15 +170,35 @@ const Navbar = () => {
                         </div>
 
                         {/* COMPACT SEARCH BOX */}
-                        <div className="hidden xl:flex items-center ml-auto">
+                        <div className="hidden xl:block relative ml-auto">
                             <div className="flex items-center bg-white/10 rounded-full px-3 py-1 border border-white/20 focus-within:bg-white focus-within:border-white transition-colors group">
                                 <input
                                     type="text"
                                     placeholder="Search..."
+                                    value={searchQuery}
+                                    onChange={(e) => handleSearch(e.target.value)}
                                     className="bg-transparent border-none text-white placeholder-gray-300 text-xs w-32 focus:w-48 focus:text-gray-900 focus:placeholder-gray-500 outline-none transition-all duration-300"
                                 />
                                 <Search size={14} className="text-gray-300 group-focus-within:text-secondary ml-2" />
                             </div>
+
+                            {/* Desktop Search Results */}
+                            {searchResults.length > 0 && (
+                                <div className="absolute top-full right-0 mt-2 w-64 bg-white rounded-lg shadow-xl border border-gray-200 overflow-hidden z-50">
+                                    <div className="max-h-60 overflow-y-auto">
+                                        {searchResults.map((result, idx) => (
+                                            <Link
+                                                key={idx}
+                                                to={result.path}
+                                                onClick={handleResultClick}
+                                                className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-secondary border-b border-gray-100 last:border-0"
+                                            >
+                                                <div className="font-bold">{result.title}</div>
+                                            </Link>
+                                        ))}
+                                    </div>
+                                </div>
+                            )}
                         </div>
 
                         {/* MOBILE TOGGLE */}
@@ -172,9 +230,31 @@ const Navbar = () => {
                         {/* Mobile Search */}
                         <div className="p-4 bg-gray-50 border-b border-gray-100">
                             <div className="relative">
-                                <input type="text" placeholder="Search..." className="w-full pl-3 pr-8 py-2 text-sm border border-gray-200 rounded focus:border-secondary outline-none" />
+                                <input
+                                    type="text"
+                                    placeholder="Search..."
+                                    value={searchQuery}
+                                    onChange={(e) => handleSearch(e.target.value)}
+                                    className="w-full pl-3 pr-8 py-2 text-sm border border-gray-200 rounded focus:border-secondary outline-none"
+                                />
                                 <Search size={16} className="absolute right-2.5 top-2.5 text-gray-400" />
                             </div>
+
+                            {/* Mobile Search Results */}
+                            {searchResults.length > 0 && (
+                                <div className="mt-2 bg-white rounded-md shadow-lg border border-gray-100 overflow-hidden">
+                                    {searchResults.map((result, idx) => (
+                                        <Link
+                                            key={idx}
+                                            to={result.path}
+                                            onClick={handleResultClick}
+                                            className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 font-bold border-b border-gray-50 last:border-0"
+                                        >
+                                            {result.title}
+                                        </Link>
+                                    ))}
+                                </div>
+                            )}
                         </div>
 
                         <div className="flex-1 overflow-y-auto p-2">
